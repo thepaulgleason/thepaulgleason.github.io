@@ -82,6 +82,13 @@
         </div>    
         <div class="row">
             <div class="buttons-main center">
+                <script>
+                    var units=0;
+                     document.getElementById('ES').onclick = function() {
+                     units=units+2; // here
+                    document.getElementById("totalselected").innerHTML = units;
+                    };
+                </script>
                 <a href="https://sfhacks1.typeform.com/to/NPTzRf" target="_blank" class="waves-effect waves-light btn-large hoverable amber accent-4">APPLY</a>
                 <!-- <a class="waves-effect waves-light btn-large hoverable amber accent-4"></a> -->
             </div>
