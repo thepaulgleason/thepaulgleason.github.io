@@ -1,2 +1,2 @@
-# thepaulgleason.io
+# thepaulgleason.github.io
 personal website
