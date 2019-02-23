@@ -47,5 +47,26 @@ Milestones:
 
 Existing Solution
 
+Should i use firebase or use sql
+firebase
+-it comes with authentication
+-it has noSql so if i don't want to scale
+- not sure if i can convert the data to excel sheet if i wanted to edit the data
+-comes with hosting
+-not sure if i will ever use it on a job, wont look as good as sql (assumption, let me look this one up)
+
+
+sql
+-many companies use sql and it would be good to add to my resume
+-it would be something i could use in the future
+-it would be free just like firebase
+-i could use it if this app scales (more users, more features added)
+-relational
+-i would learn a lot more (i think)
+
+-more complicated to set up
+-not sure if it the project really needs it
+-more difficult to do to update the database (especially in realtime)
+
 
 	
