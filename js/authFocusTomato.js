@@ -6,7 +6,7 @@
             user.getIdToken().then(function(accessToken) {
               
               document.getElementById('user-name').textContent = 'hi ' + displayName
-              document.getElementById('sign-in').textContent = 'Sign out';
+              document.getElementById('sign-out-button').textContent = 'Sign out';
               document.getElementById('firebase-auth-container').hidden = true;
 
               document.getElementById('account-details').textContent = JSON.stringify({
