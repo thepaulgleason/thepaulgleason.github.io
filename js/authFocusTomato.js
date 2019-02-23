@@ -4,9 +4,11 @@
             // User is signed in.
             var displayName = user.displayName;
             user.getIdToken().then(function(accessToken) {
+              
               document.getElementById('user-name').textContent = 'hi ' + displayName
               document.getElementById('sign-in').textContent = 'Sign out';
-              
+              document.getElementById('firebase-auth-container').hidden = true;
+
               document.getElementById('account-details').textContent = JSON.stringify({
                 displayName: displayName,
                 email: email,
@@ -20,8 +22,8 @@
             });
           } else {
             // User is signed out.
-            document.getElementById('sign-in').textContent = 'Sign in';
-            
+            document.getElementById('user-name').hidden = true
+            document.getElementById('firebase-auth-container').hidden = false
           }
         }, function(error) {
           console.log(error);
