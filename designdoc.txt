@@ -1,0 +1,51 @@
+Deisgn Doc for FocusTomato (feasability analysis)
+Project: focusTomato  
+People: Paul Gleason
+template for design doc: https://medium.freecodecamp.org/how-to-write-a-good-software-design-document-66fcf019569c
+
+Overview: 
+focusTomato is a timer application that tracks what a user has worked on. 
+The goal of the app is to clearly keep track of the amount of time the user has worked on a project 
+while also letting the user know while he is working if he should keep working, stop, or take a break.
+The app is inspired by the pomodoro techniue where users work using deliberate pratice focused attention for 25 minutes and then takes a 5 minute break.
+
+The app will be offered as a native mobile app, on the web, and on a smart watch.
+Front end is swift for mobile and javascript/html for web.
+The backend will be firebase by google. 
+The web is hosted on github for now, firebase hosts the backend database.
+
+Conext:
+This app is necesarry so users can track their own data no matter what the task is (exercise, meditation, working, reading) 
+There are no free software out there that tracks tasks and serves as a timer.
+The pomodoro technique, the intervals for workouts, the bells for meditation all in one place is not offered in any other app (that we know of).
+The app also represents me, it is part of my (Paul's) brand.
+It is a personal app that my friends can use as well (hence why noSql and simple html html pages are used, they are easy to set up and not intended for scale).
+
+Goals:
+A. users will be more productive
+B. Users feel a greater sense of purpose by knowing how productive they have been
+C. Users Time Well Spent increases (the app is not disctracting, but increases their focus on the task at hand).
+D. Daily sessions per daily active users is 2  (# of daily sessions)/(# of daily active users)
+E. I will not be deploying this into the mass market (at least this version of the app. 
+If there is a need for the 
+
+Milestones:
+1. create a web page
+	-add firebase authentication
+	-add timer functionality
+	-add tasks
+	-add database
+	-add task buttons and show data for each task
+2. create an ios app
+	-add firebase authentication
+	-add timer functionality
+	-add tasks
+	-add database
+	-add task buttons and show data for each task
+3. create the watch app
+4. allow user to download data so they can import it to excel or google sheets
+
+Existing Solution
+
+
+	
