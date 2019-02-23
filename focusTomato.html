@@ -8,9 +8,54 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="css/mystyles.css" rel="stylesheet">
+        
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+        <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCZzcxxtq48xiWnjKu5AbtmqbZYD0VyIYI",
+    authDomain: "focustomato.firebaseapp.com",
+    databaseURL: "https://focustomato.firebaseio.com",
+    projectId: "focustomato",
+    storageBucket: "focustomato.appspot.com",
+    messagingSenderId: "958241018007"
+  };
+  firebase.initializeApp(config);
 
-        <h2 align="left">Paul Gleason</h1>
+  var database = firebase.database()
+</script>
 
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+<script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'www.thepaulgleason.github.io',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        ],
+        // tosUrl and privacyPolicyUrl accept either url string or a callback
+        // function.
+        // Terms of service url/callback.
+        tosUrl: '<your-tos-url>',
+        // Privacy policy url/callback.
+        privacyPolicyUrl: function() {
+          window.location.assign('<your-privacy-policy-url>');
+        }
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+
+        <h2 align="left">Paul's focusTomato</h1>
         <div class="sidenav" id="mySidenav">
             <a class="active" href="index.html">Home</a>
             <a class="active" href="focusTomato.html">focusTomato</a>
@@ -21,6 +66,7 @@
          </head>
 
      <body>
-
+         <script src="js/authFocusTomato.js"></script>
+         <div id="firebaseui-auth-container"></div>
          </body>    
  </html>
