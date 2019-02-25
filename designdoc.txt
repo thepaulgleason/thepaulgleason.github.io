@@ -2,6 +2,7 @@ Deisgn Doc for FocusTomato (feasability analysis)
 Project: focusTomato  
 People: Paul Gleason
 template for design doc: https://medium.freecodecamp.org/how-to-write-a-good-software-design-document-66fcf019569c
+trello to do list: https://trello.com/b/vt1sq3Sx/focustomato
 
 Overview: 
 focusTomato is a timer application that tracks what a user has worked on. 
@@ -16,10 +17,10 @@ The web is hosted on github for now, firebase hosts the backend database.
 
 Conext:
 This app is necesarry so users can track their own data no matter what the task is (exercise, meditation, working, reading) 
-There are no free software out there that tracks tasks and serves as a timer.
+There is no free software out there that tracks tasks and serves as a timer between the web and phone app in a quick and easy way.
 The pomodoro technique, the intervals for workouts, the bells for meditation all in one place is not offered in any other app (that we know of).
 The app also represents me, it is part of my (Paul's) brand.
-It is a personal app that my friends can use as well (hence why noSql and simple html html pages are used, they are easy to set up and not intended for scale).
+It is a personal app that my friends can use as well (hence why noSql and simple html pages are used, they are easy to set up and not intended for scale).
 
 Goals:
 A. users will be more productive
