@@ -9,7 +9,7 @@
 
               document.getElementById('user-name').textContent = 'hi ' + displayName
               document.getElementById('sign-out-button').hidden = false
-              document.getElementById('#firebaseui-auth-container').hidden = true;
+              //document.getElementById('#firebaseui-auth-container').hidden = true;
               document.getElementById("profilePic").src = photoURL
               document.getElementById('account-details').textContent = JSON.stringify({
                 displayName: displayName,
@@ -26,7 +26,7 @@
             // User is signed out.
             document.getElementById('user-name').hidden = true
             document.getElementById('sign-out-button').hidden = true
-            document.getElementById('#firebaseui-auth-container').hidden = false
+            //document.getElementById('#firebaseui-auth-container').hidden = false
           }
         }, function(error) {
           console.log(error);
