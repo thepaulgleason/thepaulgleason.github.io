@@ -8,8 +8,8 @@ var time = 25 //make time equal to firebase.user.activity.timeForActivity
 
 function start(){
     status = true;
-    document.getElementById("startBtn").disabled = true
-    myTimer()
+    document.getElementById("startBtn").disabled = true;
+    myTimer();
 }
 
 function stop(){
@@ -42,9 +42,7 @@ if (sec<10){
     sec = "0" + sec;
 } 
 
-
-
-document.getElementById("timerLabel").innerHTML = min + ":" + sec + ":"
+document.getElementById("timerLabel").innerHTML = min + ":" + sec + ":";
 
 }
   }
