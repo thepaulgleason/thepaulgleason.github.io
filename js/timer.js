@@ -1,28 +1,45 @@
 //timer functionality code
 //show this code if user is logged in.
 //so we need to see if it is logged in
-//also automate this task: open visual studio, powershell, tomato-timer.com(or thepaulgleason.github.io/focusTomato when I got that running)
 
-var minutes = 25;
-var seconds = 0;
-var myVar = setTimeout(myTimer, 1000);
 
-//accept user input eventually
-//for now just set time at 25 minutes
+var running = false
+var time = 25
+
+=
+
+function start(){
+    status = true;
+    document.getElementById("startBtn").disabled = true
+    
+}
+
+function stop(){
+    status = false;
+    document.getElementById("startBtn").disabled = true;
+}
+
+functions reset(){
+    status = false;
+    time = 25;
+}
 
 function myTimer() {
-  if (seconds == 0 && minutes != 0) {
-      minutes -= 1;
-      seconds = 59;
-      document.getElementById("time").textContent.concat(n(minutes), ":", n(seconds));
-  } else if (seconds == 0 && minutes == 0) {
-      window.clearTimeout(myVar);
-  } else {
-      seconds -= 1;
-       document.getElementById("time").textContent.concat(n(minutes), ":", n(seconds));
-  }
-  
-  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+  time--;
+  var min = Math.floor(time/100/60);
+  var sec = Math.floor(time/100);
+
+if(min<10){
+    min = "0" + min;
+}
+if(sec>=60){
+    sec = sec % 60;
+}
+if (sec<10){
+    sec = "0" + sec;
+}
+document.getElementById("timerLabel").innerHTML = min + ":" + sec + ":"
+
 }
 
 function n(n){
