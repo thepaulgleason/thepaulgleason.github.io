@@ -55,7 +55,48 @@
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
 
-    <script src="js/authFocusTomato.js"></script>
+    <script>
+    initApp = function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var photoURL = user.photoURL;
+            user.getIdToken().then(function(accessToken) {
+              
+
+              document.getElementById('user-name').textContent = 'hi ' + displayName
+              document.getElementById('sign-out-button').hidden = false
+              //document.getElementById('#firebaseui-auth-container').hidden = true;
+              document.getElementById("profilePic").src = photoURL
+              document.getElementById('account-details').textContent = JSON.stringify({
+                displayName: displayName,
+                email: email,
+                emailVerified: emailVerified,
+                phoneNumber: phoneNumber,
+                photoURL: photoURL,
+                uid: uid,
+                accessToken: accessToken,
+                providerData: providerData
+              }, null, '  ');
+            });
+          } else {
+            // User is signed out.
+            document.getElementById('user-name').hidden = true
+            document.getElementById('sign-out-button').hidden = true
+            //document.getElementById('#firebaseui-auth-container').hidden = false
+          }
+        }, function(error) {
+          console.log(error);
+        });
+      };
+
+      window.addEventListener('load', function() {
+        initApp()
+      });
+  
+    
+    </script>
 
 
         <h2 align="left">Paul's focusTomato</h1>
@@ -75,53 +116,6 @@
          <div id='#firebaseui-auth-container'></div>
 
          <div class="container">
-<<<<<<< HEAD
-            <h1 class="title">StopWatch</h1>
-            <h1 id="timerLabel">00:00:00</h1>
-            <input type="button" class="myButton" onclick="start()" value="START" id="startBtn">
-            <input type="button" class="myButton" onclick="stop()" value="STOP">
-            <input type="button" class="myButton" onclick="reset()" value="RESET">
-        </div>
-        <script>
-          var status = 0; // 0:stop 1:running
-    var time = 0;
-    var startBtn = document.getElementById("startBtn");
-    var timerLabel = document.getElementById('timerLabel');
-	function start(){
-        status = 1;
-        startBtn.disabled = true;
-        timer();
-    }
-    function stop(){
-        status = 0;
-        startBtn.disabled = false;
-    }
-    function reset(){
-        status = 0;
-        time = 0;
-        timerLabel.innerHTML = '00:00:00';
-        startBtn.disabled = false;
-    }
-    function timer(){
-        if (status == 1) {
-            setTimeout(function() {
-                time++;
-                var min = Math.floor(time/100/60);
-                var sec = Math.floor(time/100);
-                var mSec = time % 100;
-                if (min < 10) min = "0" + min;
-                if (sec >= 60) sec = sec % 60;
-                if (sec < 10) sec = "0" + sec;
-                if (mSec < 10) mSec = "0" + mSec;
-                timerLabel.innerHTML = min + ":" + sec + ":" + mSec;
-                timer();
-            }, 10);
-            
-
-         
-
-         </script>
-=======
           <h1 class="title">StopWatch</h1>
           <h1 id="timerLabel">00:00:00</h1>
           <input type="button" class="myButton" onclick="start()" value="START" id="startBtn">
@@ -177,7 +171,6 @@
           };
       </script>
         
->>>>>>> tmp
           
           
 
