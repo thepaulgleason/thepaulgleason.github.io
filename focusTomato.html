@@ -154,7 +154,8 @@ firebase.auth().signOut().then(function() {
       </div>
       <script>
           var status = 0; // 0:stop 1:running
-          var time = 25;
+          var userTime = 25;
+          var time = userTime * 360;
           var startBtn = document.getElementById("startBtn");
           var timerLabel = document.getElementById('timerLabel');
         function start(){
