@@ -170,6 +170,8 @@ firebase.auth().signOut().then(function() {
           function reset(){
               status = 0;
               time = userTime*60;
+              var min = Math.floor(time/60);
+              var sec = Math.floor(time % 60);
               timerLabel.innerHTML = min + ":" + sec;
               startBtn.disabled = false;
           }
@@ -185,7 +187,7 @@ firebase.auth().signOut().then(function() {
                       if (sec < 10) sec = "0" + sec;
                       timerLabel.innerHTML = min + ":" + sec;
                       timer();
-                  }, 100);
+                  }, 1000);
               }
           }
           document.onkeydown = function(event) { 
