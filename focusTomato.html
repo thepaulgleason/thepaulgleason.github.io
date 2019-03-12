@@ -169,11 +169,11 @@ firebase.auth().signOut().then(function() {
           }
           function reset(){
               status = 0;
+              startBtn.disabled = false;
               time = userTime*60;
               var min = Math.floor(time/60);
               var sec = Math.floor(time % 60);
               timerLabel.innerHTML = min + ":" + sec;
-              startBtn.disabled = false;
           }
           function timer(){
               if (status == 1) {
