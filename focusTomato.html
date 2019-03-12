@@ -176,7 +176,7 @@ firebase.auth().signOut().then(function() {
               timerLabel.innerHTML = min + ":" + sec;
           }
           function timer(){
-              if (status == 1) {
+              if (status == 1 && time != 0) {
                   setTimeout(function() {
                       time--;
                       var min = Math.floor(time/60);
