@@ -10,9 +10,17 @@
     messagingSenderId: "958241018007"
   };
   firebase.initializeApp(config);
-  var database = firebase.database();
+  
+
+  const preObject = document.getElementById('object');
+
+  const dbRefObject = firebase.database().ref().child('object');
+
+  dbRefObject.on('value', snap => console.log(snap.val()));
 
 
-})
+
+
+}());
   
 
