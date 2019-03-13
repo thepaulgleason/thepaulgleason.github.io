@@ -14,7 +14,9 @@
 
   const preObject = document.getElementById('object');
 
-  const dbRefObject = firebase.database().ref().child('object');
+  const dbRefObject = firebase.firestore();
+
+  dbRefObject.settings({timestampsInSnapshots: true});
 
   dbRefObject.on('value', snap => console.log(snap.val()));
 
