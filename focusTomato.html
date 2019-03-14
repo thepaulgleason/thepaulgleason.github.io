@@ -11,8 +11,7 @@
         
 
        
-        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+        
        
 
         <h2 align="left">Paul's focusTomato</h1>
@@ -27,9 +26,13 @@
 
      <body>
 
-        <pre id="object"></pre></pre>
+        
+
+        <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
         <script>
-        var config = {
+          // Initialize Firebase
+          var config = {
             apiKey: "AIzaSyCZzcxxtq48xiWnjKu5AbtmqbZYD0VyIYI",
             authDomain: "focustomato.firebaseapp.com",
             databaseURL: "https://focustomato.firebaseio.com",
@@ -37,10 +40,8 @@
             storageBucket: "focustomato.appspot.com",
             messagingSenderId: "958241018007"
           };
-          firebase.initializeApp(config);   
+          firebase.initializeApp(config);
           const db = firebase.firestore();
-        db.settings();
-
         </script>
         
 
