@@ -28,6 +28,21 @@
      <body>
 
         <pre id="object"></pre></pre>
+        <script>
+        var config = {
+            apiKey: "AIzaSyCZzcxxtq48xiWnjKu5AbtmqbZYD0VyIYI",
+            authDomain: "focustomato.firebaseapp.com",
+            databaseURL: "https://focustomato.firebaseio.com",
+            projectId: "focustomato",
+            storageBucket: "focustomato.appspot.com",
+            messagingSenderId: "958241018007"
+          };
+          firebase.initializeApp(config);   
+          const db = firebase.firestore();
+        db.settings({timestampsInSnapshots: true});
+
+        </script>
+        
 
         <script src="app.js"></script>
 
