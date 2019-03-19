@@ -12,8 +12,8 @@ var currentUser = db.collection("users").where("firstName", "==", "Paul").where(
 
 //2. which activity is selected? create a button/ form to select which activity you are working on
 //to the activityList document and list each activity in a table
-//a. get to the subcollection the get documents
-currentUser.collection("activityList").get().then(function(querySnapshot) {
+//a. get to the subcollection the get document
+db.collection("users").where("firstName", "==", "Paul").where("lastName", "==", "Gleason");.collection("activityList").get().then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
       // doc.data() is never undefined for query doc snapshots
       console.log(doc.id, " => ", doc.get("activityName", "none"));
