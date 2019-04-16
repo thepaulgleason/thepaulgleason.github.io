@@ -22,7 +22,7 @@ db.collection("users").where("firstName", "==", "Paul").where("lastName", "==", 
 //3. every 5 minutes, add to the time worked on the activity
 //4. display how much time has been worked on for each activity
 
-//install authenitcation
+//install authenitcatiocd then
 
 
 
